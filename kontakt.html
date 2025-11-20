@@ -1,0 +1,88 @@
+<!-- Kontaktside for Trykdigtryg -->
+
+<!DOCTYPE html> <!-- Type af dokument  -->
+<html lang="da"> <!-- Sprog på siden  -->
+
+<!-- HEAD START -->
+<head> <!-- Information som browseren bruger, men som ikke vises til brugeren -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trykdigtryg - Kontakt</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css"> <!-- Eksternt stylesheet -->
+</head>
+<!-- /HEAD SLUT -->
+
+<!-- BODY START -->
+<body> <!-- Body er alt, som brugeren kan se i browseren -->
+
+<header class="site-header"> <!-- Header repræsenterer det øverste element i et HTML-dokument, i dette tilfælde banner med navigation -->
+    <nav class="top-nav"> <!-- Nav repræsenterer navigationen på siden -->
+        <a href="index.html" class="logo-tekst">Trykdigtryg</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Forside</a></li>
+            <li><a href="ovelser.html">Øvelser</a></li>
+            <li><a href="kontakt.html" class="aktiv">Kontakt</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+<!-- Hero-billede for kontakt-siden -->
+<section class="hero-index-billede">
+    <img src="img/herobanner.jpg" alt="Solnedgang over havet i varme bordeaux nuancer, som symbol på ro og mental pause.">
+</section>
+<!-- Info-tekst på bordeaux baggrund -->
+<section class="hero-index-tekst">
+    <div class="hero-tekst-wrapper">
+        <p class="overlinie">Kontakt Trykdigtryg</p>
+        <h1>Har du spørgsmål eller idéer?</h1>
+        <p class="hero-brodtekst">
+            Trykdigtryg.dk har til formål at formidle enkle akupressurøvelser, som kan støtte unge i at finde mere ro i hverdagen.
+            Her kan du skrive, hvis du har kommentarer til øvelserne eller forslag til, hvordan vi kan blive endnu bedre til, at guide unge i at passe på dem selv og deres mentale sundhed.
+        </p>
+    </div>
+</section>
+ <!-- Kontaktoplysninger -->
+    <section class="sektion kontakt-info">
+        <h2>Kontaktoplysninger</h2>
+
+        <p><strong>E-mail:</strong> kontakt@trykdigtryg.dk</p>
+        <p><strong>Telefon:</strong> 12 34 56 78</p>
+
+        <p class="kontakt-note">
+            OBS! øvelserne på denne hjemmeside er ment som tillæg til den enkeltes mentale velvære, og kan ikke bruges som erstatning af psykolog eller læger. 
+            Hvis du har brug for akut hjælp til din mentale trivsel, bør du kontakte egen læge, psykiatrisk skadestue eller Livslinien på 70 201 201.
+        </p>
+    </section>
+<!-- Kontaktformular -->
+    <section class="sektion">
+        <h2>Skriv en besked</h2>
+
+        <form class="kontakt-form" aria-label="Kontaktformular">
+            <label for="navn">Navn</label>
+            <input id="navn" name="navn" type="text" placeholder="Dit navn">
+
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" placeholder="din@mail.dk">
+
+            <label for="besked">Besked</label>
+            <textarea id="besked" name="besked" rows="4" placeholder="Skriv din besked her..."></textarea>
+
+            <button type="submit" class="btn-primar">Send besked</button>
+        </form>
+
+    </section>
+
+</main>
+<!-- Footer med kort opsummering -->
+<footer>
+    <p>© 2025 Trykdigtryg.dk - Enkle akupressurøvelser til unge, der ønsker mere ro i hverdagen.</p>
+</footer>
+<!-- /FOOTER SLUT --> 
+</body>
+<!-- /BODY SLUT -->
+</html>

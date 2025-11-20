@@ -1,0 +1,353 @@
+/* Stylesheet for Trykdigtryg */
+
+/* 
+   GENERELLE NOTER:
+   - Indeholder al styling til forside, øvelser og kontakt.
+   - Kommentarer opdeler filen i sektioner for bedre overblik.
+   - Farver, skrifttyper og andre designvalg er baseret på Trykdigtryg's styletile, moodboard og lofi-skitse.
+       Mørk bordeaux: #5C1F29
+       Mellem bordeaux: #7B2836
+       Lys rødlig beige: #F7E8E4
+       Pudder: #FFC0B0
+       Mørke lilla: #2B1518
+       Kridhvid: #FFFFFF
+       Skriftype: Inter
+*/
+
+/* ========= RESET ========= */
+/* Nulstiller standard-margin, padding og box-modellen på alle elementer */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========= FARVER ========= */
+/* CSS-variabler til gennemgående farver på sitet */
+:root {
+    --dark: #5C1F29;
+    --mid: #7B2836;
+    --light: #F7E8E4;
+}
+
+/* ========= GENERELT ========= */
+/* Grundopsætning for tekst, baggrund og linjeafstand */
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--light);
+    color: #2B1518;
+    line-height: 1.6;
+}
+
+/* Max-bredde på indholdet */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2.5rem 4rem;
+}
+
+/* ========= HEADER & NAV ========= */
+/* Topbaren med tekst-logo og navigation */
+.site-header {
+    background-color: var(--dark);
+}
+
+/* Container til navigationen */
+.top-nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo-tekst i venstre side */
+.logo-tekst {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+/* Liste med menupunkter */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.2rem;
+}
+
+/* Links i navigationen */
+.nav-links a {
+    color: var(--light);
+    text-decoration: none;
+    font-size: 0.95rem;
+    padding-bottom: 0.2rem;
+    border-bottom: 2px solid transparent;
+}
+
+/* Aktivt menupunkt og hover-tilstand */
+.nav-links a:hover,
+.nav-links a.aktiv {
+    border-bottom-color: #FFC0B0;
+}
+
+/* ========= HERO – FORSIDE ========= */
+
+.hero-index-billede {
+    position: relative;
+    width: 100vw;
+    height: 30vh;
+    overflow: hidden;
+    margin-left: calc(50% - 50vw); 
+}
+
+.hero-index-billede img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Bordeaux tekstfelt under hero-billedet */
+.hero-index-tekst {
+    background-color: var(--mid);
+    color: var(--light);
+    padding: 2.5rem 1.5rem 3rem;
+    text-align: center;
+
+    width: 100vw;
+    margin-left: calc(50% - 50vw); 
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Wrapper der begrænser tekstbredden */
+.hero-tekst-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Lille linje-tekst over H1 */
+.overlinie {
+    text-transform: uppercase;
+    opacity: 0.9;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+}
+
+/* Brødtekst i heroen */
+.hero-brodtekst {
+    text-align: center;
+    margin: 0 auto 1.5rem;
+}
+
+/* ========= KNAPPER ========= */
+
+.btn-primar,
+.btn-sekundar {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+.btn-primar {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.btn-sekundar {
+    background-color: var(--mid);
+    color: var(--light);
+    border: 1px solid var(--light);
+}
+
+/* ========= SEKTIONER GENERELT ========= */
+/* Standardafstand og overskrifter i sektioner */
+.sektion {
+    margin-top: 3rem;
+}
+
+.sektion h1,
+.sektion h2 {
+    margin-bottom: 1rem;
+}
+
+/* ========= FORSIDE – ØVELSESKORT ========= */
+/* Introduktion til kortene */
+.ovelser-forside {
+    text-align: center;
+}
+
+/* Grid til kort – på mobil ligger de under hinanden */
+.ovelse-kort-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Selve kortet */
+.ovelse-kort {
+    background-color: var(--mid);
+    color: var(--light);
+    padding: 1.3rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Billede øverst på kortet */
+.ovelse-kort img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 0.8rem;
+}
+
+/* ========= ØVELSER – UNDERSIDE ========= */
+/* Hver øvelse har sin egen hvide boks */
+.ovelse-detalje {
+    background-color: #FFFFFF;
+    padding: 1.5rem;
+    border-radius: 16px;
+    margin-top: 2rem;
+}
+
+/* Layout til billede + tekst */
+.ovelse-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+/* Øvelsesbillede */
+.ovelse-layout img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* Lille ekstra-note under øvelsen */
+.ovelse-hint {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+/* ========= KONTAKT – HERO ========= */
+
+.hero {
+    background-color: var(--mid);
+    color: var(--light);
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+    margin: 2rem auto 0;
+    max-width: 1100px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.hero-tekst {
+    flex: 1;
+}
+
+.hero-billede-wrapper {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.hero-billede-wrapper img {
+    width: 100%;
+    display: block;
+}
+
+/* ========= KONTAKTSIDE – INFO & KONKTAKTFORM ========= */
+/* Kontaktoplysninger og disclaimer */
+.kontakt-info {
+    margin-top: 2.5rem;
+}
+
+.kontakt-note {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Formular-layout */
+.kontakt-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+/* Felter i formularen */
+.kontakt-form input,
+.kontakt-form textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 8px;
+    border: 2px solid var(--mid);
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+/* Fokusmarkering til tastaturbrugere */
+.kontakt-form input:focus,
+.kontakt-form textarea:focus {
+    outline: 3px solid var(--dark);
+}
+
+/* ========= FOOTER ========= */
+footer {
+    background-color: var(--dark);
+    color: var(--light);
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.85rem;
+    margin-top: 3rem;
+}
+
+/* ========= DESKTOP 768px+ ========= */
+/* Justeringer til større skærme */
+@media (min-width: 768px) {
+
+    /* Forside: kort i 3 kolonner */
+    .ovelse-kort-grid {
+        flex-direction: row;
+    }
+
+    .ovelse-kort {
+        width: 33%;
+    }
+
+    /* Øvelser: billede og tekst side om side */
+    .ovelse-layout {
+        flex-direction: row;
+        gap: 2.5rem;
+    }
+
+    .ovelse-layout img {
+        width: 40%;
+    }
+
+    .hero {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .hero-tekst {
+        width: 50%;
+    }
+
+    .hero-billede-wrapper {
+        width: 50%;
+    }
+}
+
+
